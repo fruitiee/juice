@@ -1,0 +1,11 @@
+Screen Scrapping
+
+open chrome or any other browser open any website(geeks,wikipedia,article)
+
+in uipath:
+create a process 
+drag use application browser----indicate screen(background browser(website)---click indicate then confirm
+then in uipath main,drag get text---indicate the text to be extracted
+create a variable----result--datatype-string
+drag message box---give the variable result
+in get text---properties--text value--give result
