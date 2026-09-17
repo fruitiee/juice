@@ -1,62 +1,16 @@
 Website
-
 https://www.w3schools.com/html/html_tables.asp
 
-📝 Steps to remember
-1. Create Project
-Open UiPath Studio
-New → Process
-Give name: WebpageToExcel
-2. Open Webpage
+create a variable
+dtTable--datatype--datatable
 
-Add:
+Drag use application browse--indicate the website screen opened background
+Do--Extract Table Data--indicate the column(Company,Contact,Country)
+    extract table data>properties>destination data table---enter dtTable
 
-Use Application/Browser
-
-Enter the website URL.
-
-https://www.w3schools.com/html/html_tables.asp
-3. Extract Table
-
-Inside Use Application/Browser → Do:
-
-Add:
-
-Extract Table Data
-
-Select the table from webpage.
-
-Create output variable:
-
-dtTable
-Type:
-DataTable
-
-👉 This stores the webpage table.
-
-4. Create Excel
-
-Below the browser activity, add:
-
-Use Excel File
-
-Create/select:
-
-WebData.xlsx
-5. Write to Excel
-
-Inside Use Excel File, add:
-
-Write DataTable to Excel
-
-Set:
-
-What to write → dtTable
-Destination → "Sheet1!A1"
-6. Run
-
-Click:
-
-Save → Run ▶️
-
-The webpage table will be extracted and stored in Excel.
+create an empty excel saves as WebData
+outside do
+use excel file---browse the created excel 
+inside use excel file Do>drag write datatable excel:
+                               what to write:dtTable
+                              Destination:Excel.Sheet("Sheet1").Range("A1")
