@@ -1,0 +1,39 @@
+Step 1: Create variables
+
+In Variables panel create:
+
+text → String
+clipboardText → String
+Step 2: Add Input Dialog
+
+Search Input Dialog → drag it into workflow.
+
+Set:
+
+Title: Clipboard
+Label: Enter text
+Result: text
+Step 3: Add Set To Clipboard
+
+Click + → search Set To Clipboard.
+
+In Text, enter:
+
+text
+
+This copies the entered text to clipboard.
+
+Step 4: Add Get From Clipboard
+
+Click + → search Get From Clipboard.
+
+Set Result as:
+
+clipboardText
+Step 5: Add Message Box
+
+Click + → Message Box.
+
+Enter:
+
+"Clipboard Content: " + clipboardText
