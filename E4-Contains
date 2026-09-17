@@ -1,0 +1,12 @@
+Create a process in UIPATH
+
+create variables:
+  result-datatye---boolean
+  customername--datatype-string--defaultvalue--"John"
+
+Drag assign: 
+  To variable-->result
+  Set value--->customername.Contains("John")
+
+Drag message box:
+  result.ToString
