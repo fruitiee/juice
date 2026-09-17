@@ -3,12 +3,22 @@ Variables create:
 CustomerName → String
 Amount → String
 Email → String
+
 Add Input Dialog
-Customer Name → CustomerName
+Dialog Title->"Invoice"
+Input Label->"Enter name"
+Value entered→ CustomerName
+
 Add Input Dialog
-Amount → Amount
+Dialog Title->"Invoice"
+Input Label->"Enter amount"
+Value entered→ Amount
+
 Add Input Dialog
-Email → Email
+Dialog Title->"Invoice"
+Input Label->"Enter email"
+Value entered→Email
+
 
 Add Write Text File
 
