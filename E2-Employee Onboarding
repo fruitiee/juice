@@ -1,0 +1,33 @@
+create variable
+
+empname        string
+email          string
+department     string
+isITdept       Boolean             false
+
+=> add assign activity
+   save to -> empname
+
+   value to save } -> "mugil"
+
+=> add another assign activity
+   save to -> email
+   value to save = "mugil@gmail.com"
+
+=> add another assign activity
+   save to -> department
+   value to save -> "IT support"
+
+=> add another assign activity
+   save to -> isITdept
+   value to save -> department.Contains("IT")
+
+=> add else if activity
+   condition
+      department = "IT support"
+
+Inside then add Message box
+   Type "welcome" + empname
+
+Inside else add message box.
+   "manual onboarding required."
