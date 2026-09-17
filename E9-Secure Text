@@ -1,0 +1,46 @@
+Step 1 — Create Process
+Open UiPath Studio
+Click New → Process
+Enter name: SecureText
+Click Create
+Step 2 — Add Input Dialog
+Go to Activities
+Search Input Dialog
+Drag Input Dialog into Main.xaml.
+
+Set:
+
+Title: Secure Text
+Label: Enter Password
+Input Type: Password
+
+You will see an Output / Result field.
+
+Click + → Create Variable and create:
+
+password
+
+Datatype should be:
+
+String
+
+So the password entered by the user will be stored in password.
+
+Step 3 — Open Notepad
+From Activities, search Use Application/Browser
+Drag it below Input Dialog.
+Click Indicate application to automate
+Open Notepad.
+Select the Notepad window.
+Step 4 — Add Type Into
+
+Inside Use Application/Browser:
+
+Click Add Activity
+Search Type Into
+Select Type Into
+Click inside the Notepad typing area.
+
+In the Text field, enter:
+
+password
