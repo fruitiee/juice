@@ -21,8 +21,8 @@ Value entered→Email
 
 
 Add Write Text File
-
-File: C:\Invoices\Invoice.txt
+Create a empty notepad file
+indicate in write text file(File: C:\Invoices\Invoice.txt)
 Text:
 "INVOICE" + Environment.NewLine +
 "Customer: " + CustomerName + Environment.NewLine +
