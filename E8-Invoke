@@ -1,0 +1,31 @@
+Step 1 — Create variable
+
+Go to Variables → create:
+
+Name: text
+Type: String
+Default: "hello uipath"
+
+Create another:
+
+Name: upperText
+Type: String
+Step 2 — Add Invoke Method
+
+Search Invoke Method and drag it into the workflow.
+
+Set:
+
+TargetObject → text
+MethodName   → ToUpper
+Result       → upperText
+
+That's all. ✅
+
+Step 3 — Add Message Box
+
+Add Message Box below Invoke Method.
+
+Enter:
+
+upperText
