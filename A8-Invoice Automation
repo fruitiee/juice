@@ -1,0 +1,25 @@
+New Process → InvoiceBot
+Variables create:
+CustomerName → String
+Amount → String
+Email → String
+Add Input Dialog
+Customer Name → CustomerName
+Add Input Dialog
+Amount → Amount
+Add Input Dialog
+Email → Email
+
+Add Write Text File
+
+File: C:\Invoices\Invoice.txt
+Text:
+"INVOICE" + Environment.NewLine +
+"Customer: " + CustomerName + Environment.NewLine +
+"Amount: " + Amount + Environment.NewLine +
+"Email: " + Email
+
+Add Message Box
+
+"Invoice Created Successfully"
+Click Run ▶
