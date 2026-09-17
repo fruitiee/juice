@@ -1,0 +1,115 @@
+Step 1 — Create the project
+Open UiPath Studio
+Click New → Process
+Name it:
+MovieRatingBot
+Click Create
+Step 2 — Create Input Dialog
+In Activities, search:
+Input Dialog
+Drag it into Main Sequence.
+
+Set:
+
+Title
+
+Movie Rating
+
+Label
+
+Enter movie name:
+Create output variable
+
+Find Output → Result.
+
+Click the variable field and create:
+
+movieName
+
+Type:
+
+String
+
+So:
+
+Input Dialog
+Result → movieName
+Step 3 — Open IMDb search
+
+Below Input Dialog:
+
+Add Use Application/Browser.
+Click Indicate Application.
+Open Chrome.
+For the URL, use:
+"https://www.imdb.com/find/?q=" + movieName
+
+⚠️ Keep the quotation marks around the URL part.
+
+Example
+
+If user enters:
+
+Avatar
+
+UiPath opens:
+
+https://www.imdb.com/find/?q=Avatar
+Step 4 — Click the movie
+
+Inside Use Application/Browser → Do:
+
+Add Click.
+Click Indicate on screen.
+On IMDb search results, select the movie title you want.
+Usually select the first matching movie.
+
+Example:
+
+Avatar
+2009
+
+Click that movie.
+
+Your workflow becomes:
+
+Input Dialog
+     ↓
+Use Application/Browser
+     ↓
+Click Movie
+Step 5 — Get the rating
+
+After the Click activity:
+
+Add Get Text.
+Click Indicate on screen.
+IMDb movie page will be shown.
+Select the rating number.
+
+For example:
+
+7.8
+Create output variable
+
+In Get Text → Text value (Out):
+
+Create:
+
+movieRating
+
+Type:
+
+String
+
+So:
+
+Get Text
+Text value → movieRating
+Step 6 — Display the result
+
+Below Get Text:
+
+Add Message Box.
+In the message field enter:
+"Movie: " + movieName + vbCrLf + "IMDb Rating: " + movieRating
