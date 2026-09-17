@@ -1,0 +1,49 @@
+Step 1: Create variables
+
+Create these 3 variables:
+
+Variable	Type
+numList	List(Of Integer)
+sortedList	List(Of Integer)
+result	String
+
+For List(Of Integer), choose Browse for Types → System.Collections.Generic → List<T> → Integer.
+
+Step 2: Create the list
+
+Add Assign:
+
+To:
+
+numList
+
+Value:
+
+New List(Of Integer) From {50,20,40,10,30}
+Step 3: Sort the list
+
+Add another Assign:
+
+To:
+
+sortedList
+
+Value:
+
+numList.OrderBy(Function(x) x).ToList()
+Step 4: Convert list to text
+
+Add another Assign:
+
+To:
+
+result
+
+Value:
+
+String.Join(", ", sortedList)
+Step 5: Display output
+
+Add Message Box:
+
+"Sorted List: " + result
