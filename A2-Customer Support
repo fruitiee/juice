@@ -1,0 +1,43 @@
+2.Customer Support Bot
+Create variables  
+dtCustomer – type: DataTable
+customerRow –type: DataRow
+status – type: String
+amount – type: Double
+orderID – string
+email – string
+customerName – string
+customerID - string
+1) drag activity – use excel file
+     Workbook path—location of the excel file
+2) In Do part – drag read range
+   Range-- Excel.Sheet("Sheet1")
+And also change output as -- dtCustomer
+3) next add input dialog
+  Title-- "Customer Support"
+  Input label – "Enter Customer ID:"
+  Value entered – customerID
+*also change result as customerID in properties
+4) add assign – variable : customerRow
+Value : dtCustomer.AsEnumerable().FirstOrDefault(Function(row) row("CustomerID").ToString.Trim = customerID.Trim)
+5) drag IF 
+Condition: customerRow IsNot Nothing
+6) THEN part—assign—variable : customerName
+ Value : customerRow("CustomerName").ToString
+7) add another assign below this
+Variable : email
+Value: customerRow("Email").ToString
+8) add another assign 
+Variable: orderID
+Value: customerRow("OrderID").ToString
+9) assign – variable : amount 
+Value: Convert.ToDouble(customerRow("Amount"))
+10) assign – variable : status
+Value : customerRow("Status").ToString
+11)add message box text: "Customer Name: " + customerName + Environment.NewLine +
+"Email: " + email + Environment.NewLine +
+"Order ID: " + orderID + Environment.NewLine +
+"Total Amount: ₹" + amount.ToString("0.00") + Environment.NewLine +
+"Order Status: " + status
+12) ELSE 
+ Add message box  text: "Customer not found. Please check the Customer ID."
