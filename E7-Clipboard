@@ -36,4 +36,4 @@ Click + → Message Box.
 
 Enter:
 
-"Clipboard Content: " + clipboardText
+"Clipboard Content: " + text
