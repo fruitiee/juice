@@ -1,0 +1,11 @@
+Exception Handling
+1. flow:
+try catch
+try
+assign&gt; a =10
+assign &gt; b=0
+assign &gt; result= a\b
+2. create variables&gt; a int 32,b int32, result &gt;double(inside try scope)
+3. catch system.Exception
+message box&gt; “error” + exception.messageBox
+4. finally
